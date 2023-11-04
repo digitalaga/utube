@@ -3,39 +3,27 @@ import os
 
 class Config:
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    BOT_TOKEN = "6398068412:AAEVJfNrEuALTsGXmlHWyzOybYVqWzf1cj4"
 
     SESSION_NAME = "uploadtgtoytbot"
 
-    API_ID = int(os.environ.get("API_ID"))
+    API_ID = "6740487"
 
-    API_HASH = os.environ.get("API_HASH")
+    API_HASH = "802dbc602fc001d0f01f540da73d88c7"
 
-    CLIENT_ID = os.environ.get("CLIENT_ID")
+    CLIENT_ID = "450512777651-9osmbssue4vhclvg8emmmbpb7aopm56o.apps.googleusercontent.com"
 
-    CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+    CLIENT_SECRET = "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"
 
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    AUTH_USERS = [1098083004]
 
-    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
+    VIDEO_DESCRIPTION = "#Movies #FilmLovers #CinemaMagic #MovieNights #Entertainment #MovieReview #MovieBuff #FilmCollection #Blockbusters #ClassicMovies"
 
-    AUTH_USERS = [BOT_OWNER, 1098083004] + (
-        [int(user.strip()) for user in AUTH_USERS_TEXT.split(",")]
-        if AUTH_USERS_TEXT
-        else []
-    )
+    VIDEO_CATEGORY = ""
 
-    VIDEO_DESCRIPTION = (
-        os.environ.get("VIDEO_DESCRIPTION", "").replace("<", "").replace(">", "")
-    )
+    VIDEO_TITLE_PREFIX = ""
 
-    VIDEO_CATEGORY = (
-        int(os.environ.get("VIDEO_CATEGORY")) if os.environ.get("VIDEO_CATEGORY") else 0
-    )
-
-    VIDEO_TITLE_PREFIX = os.environ.get("VIDEO_TITLE_PREFIX", "")
-
-    VIDEO_TITLE_SUFFIX = os.environ.get("VIDEO_TITLE_SUFFIX", "")
+    VIDEO_TITLE_SUFFIX = "New Movie Latest|HD Bollywood Movie|HD South Movie"
 
     DEBUG = bool(os.environ.get("DEBUG"))
 
